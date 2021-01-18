@@ -49,6 +49,7 @@ const dateBuilder = (d) => {
           value={query}
           onKeyPress={search}
           />
+
         </div>
           {(typeof weather.main != "undefined") ? (
             <div>
@@ -68,8 +69,8 @@ const dateBuilder = (d) => {
   ) : ('') }
 
       <div className="message">
-      <h2>Entrez une ville dans la barre de recherche</h2>
-              <p>(Codé avec ❤️ par Benosmane Yassine)</p>
+      <h2>Entrez une ville dans la barre de recherche</h2> <br/><br/>
+              <p>(Codé avec ❤️ par <a href="https://www.yassine-benosmane.fr/">Benosmane Yassine</a> || Données météo fournies par <a target="_blank" href="https://openweathermap.org/">Openweathermap</a>)</p>
       </div>
 
       </main>
