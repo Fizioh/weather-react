@@ -36,6 +36,10 @@ const dateBuilder = (d) => {
   return (
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' :'app') : 'app'}>
       <main>
+      <div className="titre">
+              <h1>React Météo</h1>
+      </div>
+
         <div className="search-box">
           <input 
           type="text"
@@ -62,6 +66,12 @@ const dateBuilder = (d) => {
           </div>
           </div>
   ) : ('') }
+
+      <div className="message">
+      <h2>Entrez une ville dans la barre de recherche</h2>
+              <p>(Codé avec ❤️ par Benosmane Yassine)</p>
+      </div>
+
       </main>
     </div>
   );
