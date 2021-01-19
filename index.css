@@ -6,6 +6,7 @@ box-sizing: border-box;
 
 body {
   font-family: 'montseratt', sans-serif;
+  text-align: center;
 }
 
 .app {
@@ -21,18 +22,27 @@ body {
   padding-bottom: 75px;
   display: flex;
 }
-
+h1 {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0,0 ,0.2);
+}
 .app.warm {
   background-image: url('./assets/warm-bg.jpg');
 }
 h1, h2, p {
-  font-family: 'Lato';
   color: whitesmoke;
   margin-left: auto;
   font-weight: 400;
   margin-right: auto;
-  text-shadow: 1px 1px 2px rgb(66, 23, 23), 0 0 1em rgb(16, 16, 24), 0 0 0.2em rgb(14, 14, 15);
 }
+
+h2, p {
+  font-family: 'Lato';
+}
+
 .message {
   margin-top: 450px;
   float: right;
@@ -49,8 +59,10 @@ a {
 }
 
 .search-box{
-  width: 90%;
- margin: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 35px;
 }
 
 .search-box .search-bar {
@@ -162,7 +174,7 @@ body{
     width:100px;
     height:20px;
     border-radius:50%;
-    border:1px solid #00d8ff;
+    border:3px solid #00d8ff;
   }
 
   .nucleo , .react-logo , .react-logo:before , .react-logo:after {
