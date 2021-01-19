@@ -6,6 +6,7 @@ box-sizing: border-box;
 
 body {
   font-family: 'montseratt', sans-serif;
+  text-align: center;
 }
 
 .app {
@@ -15,21 +16,33 @@ body {
   transition: 0.4 ease-out;
 }
 .titre {
-  font-size: 28px;
+  font-size: 38px;
   text-align: center;
   letter-spacing: 3px;
+  padding-bottom: 75px;
+  display: flex;
+}
+h1 {
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  text-shadow: 3px 6px rgba(50, 50, 70, 0.5);
+  text-align: center;
+  box-shadow: 3px 6px rgba(0, 0,0 ,0.2);
 }
 .app.warm {
   background-image: url('./assets/warm-bg.jpg');
 }
 h1, h2, p {
-  font-family: 'Lato';
   color: whitesmoke;
   margin-left: auto;
   font-weight: 400;
   margin-right: auto;
-  text-shadow: 1px 1px 2px rgb(66, 23, 23), 0 0 1em rgb(16, 16, 24), 0 0 0.2em rgb(14, 14, 15);
 }
+
+h2, p {
+  font-family: 'Lato';
+}
+
 .message {
   margin-top: 450px;
   float: right;
@@ -46,13 +59,15 @@ a {
 }
 
 .search-box{
-  width: 90%;
- margin: auto;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  margin-left: 35px;
 }
 
 .search-box .search-bar {
   display: block;
-  width: 75%;
+  width: 80%;
   padding: 15px;
 
   appearance: none;
@@ -123,3 +138,73 @@ a {
   font-weight: 700;
   text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
 }
+
+/* -------------- CSS LOGO ----------------*/
+
+body{
+  font-family: 'Roboto', sans-serif;
+}
+.container{
+  opacity: 0.4;
+  width:200px;
+  height:200px;
+  margin:15px auto 0 auto;
+  display:flex;
+  align-items: center;
+  justify-content: center;
+}
+
+  .react-logo{
+    display: inline-block;
+    border-radius:50%;
+    border:10px solid #00d8ff;
+    z-index: 1;
+
+
+    animation-name:rotate;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+  }
+
+  .react-logo , .react-logo:before , .react-logo:after{
+    position:absolute;
+    display: inline-block;
+    width:100px;
+    height:20px;
+    border-radius:50%;
+    border:3px solid #00d8ff;
+  }
+
+  .nucleo , .react-logo , .react-logo:before , .react-logo:after {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nucleo{
+    width:10px;
+    height:10px;
+    border-radius:100%;
+    background:#00d8ff;
+  }
+
+  .react-logo:before , .react-logo:after{
+    content:"";
+  }
+
+  .react-logo:after{
+    transform:rotate(-57deg);
+  }
+
+  .react-logo:before{
+    transform:rotate(57deg);
+  }
+
+  @keyframes rotate{
+
+    100%{
+      transform:rotate(360deg);
+    }
+  }
