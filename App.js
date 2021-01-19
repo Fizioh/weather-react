@@ -45,7 +45,7 @@ const dateBuilder = (d) => {
           <input 
           type="text"
           className="search-bar"
-          placeholder="Entrez le nom d'une ville..."
+          placeholder="Entrez une ville..."
           onChange={e => setQuery(e.target.value)}
           value={query}
           onKeyPress={search}
@@ -68,6 +68,25 @@ const dateBuilder = (d) => {
           </div>
           </div>
   ) : ('') }
+
+  <div className='app2'>
+  {typeof weather.main === "undefined" &&
+        <div>
+        <div className="location-box">
+          <div className="location">Ville imaginaire, ID</div>
+          <div className="date">{dateBuilder(new Date())}</div>
+        </div>
+
+
+        <div className="weather-box">
+          <div className="temp">
+            ?°C
+          </div>
+          </div>
+          </div>
+      }
+
+  </div>
 
   <div class="container">
   <span class="react-logo">
