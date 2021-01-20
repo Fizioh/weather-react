@@ -69,7 +69,7 @@ const dateBuilder = (d) => {
           </div>
   ) : ('') }
 
-  <div className='app'>
+  <div className='app2'>
   {typeof weather.main === "undefined" &&
         <div>
         <div className="location-box">
