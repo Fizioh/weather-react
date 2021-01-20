@@ -37,14 +37,15 @@ const dateBuilder = (d) => {
     <div className={(typeof weather.main != "undefined") ? ((weather.main.temp > 16) ? 'app warm' :'app') : 'app'}>
       <main>
       <div className="titre">
-              <h1>React Météo</h1>
+              <h1>React Meteo</h1> 
+  
       </div>
 
         <div className="search-box">
           <input 
           type="text"
           className="search-bar"
-          placeholder="Rechercher..."
+          placeholder="Entrez une ville..."
           onChange={e => setQuery(e.target.value)}
           value={query}
           onKeyPress={search}
@@ -68,10 +69,30 @@ const dateBuilder = (d) => {
           </div>
   ) : ('') }
 
-      <div className="message">
-      <h2>Entrez une ville dans la barre de recherche</h2> <br/><br/>
-              <p>(Codé avec ❤️ par <a href="https://www.yassine-benosmane.fr/">Benosmane Yassine</a> || Données météo fournies par <a target="_blank" href="https://openweathermap.org/">Openweathermap</a>)</p>
-      </div>
+  <div className='app'>
+  {typeof weather.main === "undefined" &&
+        <div>
+        <div className="location-box">
+          <div className="location">Ville imaginaire, ID</div>
+          <div className="date">{dateBuilder(new Date())}</div>
+        </div>
+
+
+        <div className="weather-box">
+          <div className="temp">
+            ?°C
+          </div>
+          </div>
+          </div>
+      }
+
+  </div>
+
+  <div class="container">
+  <span class="react-logo">
+			<span class="nucleo"></span>
+		</span>
+    </div>
 
       </main>
     </div>
@@ -79,3 +100,4 @@ const dateBuilder = (d) => {
 }
 
 export default App;
+
