@@ -1,4 +1,4 @@
-<h1>React - app météo</h1>
+# React - app météo
 
 APP(heroku): https://app-meteo-react.herokuapp.com/
 
