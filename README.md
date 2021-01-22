@@ -13,6 +13,6 @@ Application de rendu météo avec données fournies par l'API d'<a href="https:/
 <h2>Technos</h2>
 <br/>
 
-Javascript(JSX) <br/>
-React <br/>
-CSS <br/>
+- Javascript(JSX) <br/>
+- React <br/>
+- CSS <br/>
